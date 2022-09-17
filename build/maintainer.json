@@ -294,6 +294,9 @@
     "/audiobar/latest": [
         "zxzhuty"
     ],
+    "/baidu/gushitong/index": [
+        "CaoMeiYouRen"
+    ],
     "/baidu/tieba/forum/:kw": [
         "u3u"
     ],
@@ -1137,6 +1140,15 @@
         "KTachibanaM"
     ],
     "/ezone/:category?": [
+        "nczitzk"
+    ],
+    "/fastbull/express-news": [
+        "nczitzk"
+    ],
+    "/fastbull/news": [
+        "nczitzk"
+    ],
+    "/fastbull/": [
         "nczitzk"
     ],
     "/fda/cdrh": [
