@@ -2163,6 +2163,11 @@
         docs:"https://docs.rsshub.app/programming.html#distill",
         source:[ "/" ],
         target:"/distill" } ] },
+  "dlsite.com":{ _name:"DLsite",
+    ".":[ { title:"当前日期发售的新产品",
+        docs:"https://docs.rsshub.app/anime.html#dlsite" },
+      { title:"产品打折信息",
+        docs:"https://docs.rsshub.app/anime.html#dlsite" } ] },
   "dmzj.com":{ _name:"动漫之家",
     news:[ { title:"宅新闻",
         docs:"https://docs.rsshub.app/anime.html#dong-man-zhi-jia",
@@ -6216,6 +6221,31 @@
                     const matches = new URL(url).toString().match(/https:\/\/(.*?)\.mirror\.xyz/);
                     const id = matches ? matches[1] : params.id;
                     return `/mirror/${id}`;
+                } } ] },
+  "mixcloud.com":{ _name:"Mixcloud",
+    www:[ { title:"User",
+        docs:"https://docs.rsshub.app/multimedia.html#mixcloud",
+        source:[ "/:username/:type?" ],
+        target:(params) => {
+                    if (params.username !== undefined) {
+                        if (['stream', 'uploads', 'favorites', 'listens'].includes(params.type)) {
+                            return `/mixcloud/${params.username}/${params.type}`;
+                        } else if (params.type === undefined) {
+                            return `/mixcloud/${params.username}/uploads`;
+                        }
+                    }
+                } } ],
+    ".":[ { title:"User",
+        docs:"https://docs.rsshub.app/multimedia.html#mixcloud",
+        source:[ "/:username/:type?" ],
+        target:(params) => {
+                    if (params.username !== undefined) {
+                        if (['stream', 'uploads', 'favorites', 'listens'].includes(params.type)) {
+                            return `/mixcloud/${params.username}/${params.type}`;
+                        } else if (params.type === undefined) {
+                            return `/mixcloud/${params.username}/uploads`;
+                        }
+                    }
                 } } ] },
   "mobilism.org":{ _name:"Mobilism",
     ".":[ { title:"论坛",
